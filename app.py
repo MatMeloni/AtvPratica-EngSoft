@@ -1,14 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return jsonify({"mensagem": "Hello, World!"})
-
-@app.route("/api/soma/<int:a>/<int:b>")
-def soma(a, b):
-    return jsonify({"resultado": a + b})
+def hello_world():
+    return "<p>Hello, World!</p>"
 
 if __name__ == "__main__":
     app.run(debug=True)
+
